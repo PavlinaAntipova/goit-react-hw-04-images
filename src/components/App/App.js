@@ -17,8 +17,6 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    console.log(searchQuery);
-    console.log(searchParam.get('query'));
     if (!searchQuery) {
       if (searchParam.get('query') === null) {
         return;
