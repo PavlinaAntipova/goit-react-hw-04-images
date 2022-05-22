@@ -3,11 +3,9 @@ import PropTypes from 'prop-types';
 
 import s from "./Searchbar.module.css";
 
-
-
-export default function Searchbar({updateSearchQuery, resetState}) {
+export default function Searchbar({updateSearchQuery, updateSearchParams, resetState}) {
     const [query, setQuery] = useState('');
-
+    
     const onChange = e => {
         const normalizeQuery = e.target.value.trim().toLocaleLowerCase();
         setQuery(normalizeQuery);
@@ -24,9 +22,11 @@ export default function Searchbar({updateSearchQuery, resetState}) {
                         alert("write down your request");
                         return;
                     }
-                    resetState();
-                    updateSearchQuery(query);
-                    setQuery('');
+                resetState();
+                updateSearchQuery(query);
+                updateSearchParams({ query });
+                setQuery('');
+                
             }}>
                     
 

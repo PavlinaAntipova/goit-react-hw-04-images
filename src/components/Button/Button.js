@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import s from "./Button.module.css"
 
-function Button(props) {
+function Button({increasePage}) {
         return (
-            <button className={s.button} onClick={() => { props.increasePage() }} type="button">Load More</button>
+            <button className={s.button} onClick={() => { increasePage() }} type="button">Load More</button>
         );
 }
 
