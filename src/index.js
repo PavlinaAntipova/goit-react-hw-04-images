@@ -7,7 +7,7 @@ import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/goit-react-hw-04-images/'>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
